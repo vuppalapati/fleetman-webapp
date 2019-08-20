@@ -7,6 +7,13 @@
      keypair_name: vijaysmu-keypair
      instance_type: t2.micro
      image_name: ami-056ee704806822732
+     ansible_python_interpreter: /usr/bin/python3
+
+  tasks:
+    - name:           Ensure botocore and boto3 modules are installed
+      pip:
+        name:         [ "boto", "botocore"]
+        extra_args:   "--user"
   
   tasks:
     - name: Setup security group
