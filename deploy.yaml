@@ -15,9 +15,9 @@
       set_fact:
           region: "{{ region }}"
           live_ip_address: "{{ live_ip_address }}"
-          ansible_python_interpreter" "{{ ansible_python_interpreter }}"
-          
-    - name:           Ensure botocore and boto3 modules are installed
+          ansible_python_interpreter: "{{ ansible_python_interpreter }}"
+     
+     - name: Ensure botocore and boto3 modules are installed
       pip:
         name:         [ "boto", "botocore"]
         extra_args:   "--user"
